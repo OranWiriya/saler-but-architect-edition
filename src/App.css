@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+.containerCustom {
+  @apply flex flex-col items-center justify-center min-h-screen h-full bg-gradient-to-b from-[#bfc0c070] to-[#fad85e77] from-30% to-100% text-[#42423d] gap-8 p-8 sm:p-16 sm:gap-16 md:p-20 md:gap-20;
+}
+
+.header {
+  @apply text-4xl font-bold text-center pb-8 sm:text-5xl md:text-7xl;
+}
+
+.content {
+  @apply flex flex-col items-center justify-center gap-8;
+}
+
+.input {
+  @apply sm:min-w-lg md:min-w-xl lg:min-w-2xl sm:h-12 md:h-14 p-2 sm:text-lg md:text-2xl text-center font-normal text-[#42423d] bg-[#ebe3cb85] border-2 border-[#42423d] sm:rounded-md outline-none rounded-xs focus-visible:bg-[#f0e6ca] focus-visible:border-[#fad85e77] transition-colors duration-500 ease-in-out;
+}
+
+.contextWrapper {
+  @apply min-w-[80dvw] flex flex-col justify-between items-center gap-4 sm:text-2xl md:text-3xl font-bold;
+}
+
+.actionWrapper {
+  @apply min-w-[80dvw] flex flex-col justify-between items-center gap-4;
+}
+
+.buttonBtn {
+  @apply font-medium py-2 px-4 rounded sm:text-xl md:text-2xl;
+}
+
+.btn-color {
+  @apply text-[#42423d] bg-[#fad85ed5] outline-none transition-all duration-150 ease-in-out;
+}
+
+.btn-color:hover {
+  @apply font-bold text-[#2b2926] bg-[#fad85e] scale-125;
+}
+
+.bounce-in {
+  animation: bounce-in 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.resultWrapper {
+  @apply flex flex-col items-center justify-center gap-4;
+}
+
+.display-text {
+  @apply text-2xl md:text-3xl text-[#DDA853] font-bold text-center;
+}
+
+.display-data {
+  @apply text-2xl sm:text-4xl md:text-8xl text-[#DDA853] font-bold text-center;
+}
+
+.result-list {
+  @apply flex gap-4;
+  animation: fade-in 0.8s ease-in-out;
+}
+
+.result-text {
+  @apply sm:text-xl md:text-2xl text-wrap;
+}
+
+.result-text span {
+  @apply text-[#DDA853] font-bold min-w-fit;
+}
+
+.footer {
+  @apply flex flex-col items-center justify-center gap-6 sm:text-base md:text-lg;
+}
+
+.footerContent {
+  @apply flex flex-col items-center justify-center gap-2;
+}
+
+.footerLinks {
+  @apply flex items-center justify-center gap-4 text-[#42423d] text-sm sm:text-lg md:text-xl;
+}
+
+.footerLinks a {
+  @apply flex gap-2 text-[#42423d] font-bold transition-colors duration-300 ease-in-out;
+}
+
+.footerLinks a:hover {
+  @apply text-[#DDA853] font-bold;
+}
+
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
