@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
-import { ResponseDataTransformedType } from './apis/type';
+import { ResponseDataTransformedType } from './type';
 import { counter } from './utils/counter';
 import { Footer, InputField, ResultDisplay } from './components';
 
