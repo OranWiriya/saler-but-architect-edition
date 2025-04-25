@@ -1,4 +1,4 @@
-import { ResponseDataTransformedType } from '../apis/type';
+import { ResponseDataTransformedType } from '../type';
 
 export const counter = ({
   dataRes,
